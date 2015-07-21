@@ -11,7 +11,7 @@ def tasker(threads=2, cores=16, ways=2, smt=False):
     assert(threads <= cores)
 
   tid_cnt = 0
-  cmd = 'tasket -c '
+  cmd = 'taskset -c '
   if smt:
     for i in range(0, cores):
       for k in range(0, ways):
